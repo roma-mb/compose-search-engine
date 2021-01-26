@@ -24,6 +24,4 @@ $searchEngine = (new SearchEngine($client, $crawler))
     ->setUrl('https://www.alura.com.br/cursos-online-programacao/php')
     ->run();
 
-foreach ($searchEngine as $value) {
-    echo $value;
-}
+printList($searchEngine);

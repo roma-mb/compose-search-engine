@@ -7,3 +7,10 @@ function dd($expression): void
     echo '</pre>';
     die();
 }
+
+function printList(array $values): void
+{
+    foreach ($values as $value) {
+        echo $value;
+    }
+}
