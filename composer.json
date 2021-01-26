@@ -46,5 +46,9 @@
     "scripts-descriptions": {
         "check": "Runs scripts phpunit, cs and phan",
         "run-search-engine": "Runs an example about the project search-engine, and return a value of dom element"
-    }
+    },
+    "license": "GPL-3.0",
+    "bin": [
+        "search-engine.php"
+    ]
 }
