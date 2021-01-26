@@ -1,0 +1,50 @@
+{
+    "name": "roma-mb/compose-search-engine",
+    "description": "Crawler about dom to find an specific css selector",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Romário Melo",
+            "email": "romario.melo.barreiras@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/css-selector": "^5.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "symfony/dom-crawler": "^5.2"
+    },
+    "autoload": {
+        "classmap": [
+            "./src/ClassMapExample.php"
+        ],
+        "psr-4": {
+            "App\\": "src"
+        },
+        "files": [
+            "./src/helpers.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "^4.0"
+    },
+    "scripts": {
+        "run-search-engine": "php src/example.php",
+        "phpunit": "phpunit src/tests",
+        "cs-fix": "phpcs --standard=PSR12 src/",
+        "phan-fix": "phan --allow-polyfill-parser",
+        "check": [
+            "@phpunit",
+            "@cs-fix",
+            "@phan-fix"
+        ],
+        "post-update-cmd": [
+            "@check"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Runs scripts phpunit, cs and phan",
+        "run-search-engine": "Runs an example about the project search-engine, and return a value of dom element"
+    }
+}
