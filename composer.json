@@ -1,6 +1,6 @@
 {
     "name": "roma-mb/compose-search-engine",
-    "description": "Crawler about dom to find an specific css selector",
+    "description": "Crawler about dom to find a specific css selector",
     "type": "library",
     "authors": [
         {
